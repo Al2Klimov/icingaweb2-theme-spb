@@ -1,9 +1,7 @@
-// Main color, from SPB flag's background:
-// https://commons.wikimedia.org/wiki/File:Flag_of_Saint_Petersburg_Russia.svg
+// Main color, from SPB flag's background
 @icinga-blue: #dc1b00;
 
-// Menu background color, from SPB coat of arms' ribbon:
-// https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Saint_Petersburg_(2003).svg
+// Menu background color, from SPB coat of arms' ribbon
 @menu-bg-color: #0095da;
 
 // Active submenu background color, from SPB flag's wand
@@ -17,3 +15,38 @@
 
 // Login button background color
 @icinga-secondary: @icinga-blue;
+
+#login {
+  // Login page background, Church of the Savior on Blood:
+  // https://www.flickr.com/photos/mealisland/33508464525
+  background-image: url("../img/spb/church.jpg");
+
+  #icinga-logo {
+    // Logo on login page, SPB coat of arms:
+    // https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Saint_Petersburg_(2003).svg
+    background-image: url("../img/spb/coat_of_arms.svg");
+  }
+}
+
+#layout:not(.minimal-layout) {
+  &, &.sidebar-collapsed {
+    #header-logo {
+      // Header logo, SPB coat of arms
+      background-image: url("../img/spb/coat_of_arms.svg");
+    }
+  }
+}
+
+#layout.minimal-layout #header-logo {
+  // Mobile header logo, SPB flag:
+  // https://commons.wikimedia.org/wiki/File:Flag_of_Saint_Petersburg_Russia.svg
+  background-image: url("../img/spb/flag.svg");
+}
+
+#layout:not(.minimal-layout) #menu {
+  // Menu background, SPB flag
+  background-image: url("../img/spb/flag.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+}
